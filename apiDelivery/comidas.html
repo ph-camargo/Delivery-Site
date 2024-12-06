@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Comidas</title>
+  <style>
+    /* Estilo do corpo */
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      position: relative;
+    }
+
+    /* Imagem de fundo com responsividade */
+    .background-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('./Imagens/pexels-framed-by-rania-2454533.jpg') no-repeat center center;
+      background-size: cover;
+      opacity: 0.5;
+      z-index: 1;
+    }
+
+    /* Fundo preto semitransparente */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 2;
+    }
+
+    /* Conteúdo principal */
+    .content {
+      position: relative;
+      z-index: 3;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 400px;
+    }
+
+    li {
+      background-color: rgba(255, 255, 255, 0.8);
+      color: #000;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    li:hover {
+      background-color: #ffe6e6;
+      border: 2px solid darkred;
+    }
+
+    .content a {
+    position: absolute;
+    top: 10px; /* Distância do topo */
+    left: 10px; /* Distância da esquerda */
+    text-decoration: none; /* Remove o sublinhado */
+    color: #fff; /* Cor branca */
+    font-size: 20px; /* Tamanho da fonte */
+    font-weight: bold;
+    z-index: 3; /* Garante que fique sobre os fundos */
+}
+
+/* Adicional para quando o <a> tiver hover */
+.content a:hover {
+    color: #ff5e3a; /* Altere a cor no hover */
+    text-decoration: underline; /* Opcional: Adicione sublinhado */
+}
+  </style>
+</head>
+
+<body>
+  <!-- Imagem de fundo -->
+  <div class="background-image"></div>
+
+  <!-- Camada preta transparente -->
+  <div class="overlay"></div>
+
+  <!-- Conteúdo principal -->
+  <div class="content">
+    <a href="escolha.html"><<<</a>
+    <h1>Lista de Comidas</h1>
+    <ul id="food-list">
+      <li>Pizza</li>
+      <li>Sushi</li>
+      <li>Hambúrguer</li>
+      <li>Salada</li>
+    </ul>
+  </div>
+
+  <script src="js/foods.js"></script>
+</body>
+
+</html>
